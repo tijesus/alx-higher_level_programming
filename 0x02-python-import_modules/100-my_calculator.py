@@ -5,12 +5,12 @@ if __name__ == '__main__':
 
     av = sys.argv
     ac = len(av)
-    if  ac - 1 != 3:
+    if ac - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    """ creating a dictionary with key and value pairs """    
+    """ creating a dictionary with key and value pairs """
     opera = {'+': add, '-': sub, '*': mul, '/': div}
- 
+
     if av[2] not in list(opera.keys()):
         print("Unknown operator. Available operators: +, -, * and / ")
         sys.exit(1)
