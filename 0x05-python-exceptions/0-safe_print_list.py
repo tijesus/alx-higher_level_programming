@@ -1,14 +1,13 @@
 #!/usr/phython3
 def safe_print_list(my_list=[], x=0):
-    count = 0
+    """Prints x elements of a list"""
+
     try:
-        for i in my_list:
-            print(i, end="")
-            count += 1
-            if count == x:
-                break
+        for i in range(x):
+            print(my_list[i], end="")
+        print("")
+        return x
+
     except IndexError:
-        pass
-    
-    print()
-    return (count)
+        print("")
+        return i
