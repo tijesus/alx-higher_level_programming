@@ -2,6 +2,5 @@
 """square class that does nothing"""
 
 
-class Square:
-
+class Square():
     pass
