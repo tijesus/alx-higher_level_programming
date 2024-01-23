@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""class ofor a square"""
+"""class for a square"""
 
 
 class Square:
+    """class to handle square"""
     def __init__(self, size=0):
         """validating the size of the square"""
         if not isinstance(size, int):
