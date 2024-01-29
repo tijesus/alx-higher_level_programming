@@ -36,6 +36,8 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return (self.__width * 2) + (2 * self.__height)
 
     def __str__(self) -> str:
@@ -53,4 +55,4 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        print("Bye rectangele...")
+        print("Bye rectangle...")
