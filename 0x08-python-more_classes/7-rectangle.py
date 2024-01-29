@@ -44,7 +44,6 @@ class Rectangle:
             return 0
         return (self.__width * 2) + (2 * self.__height)
 
-
     def __str__(self) -> str:
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -62,4 +61,3 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
