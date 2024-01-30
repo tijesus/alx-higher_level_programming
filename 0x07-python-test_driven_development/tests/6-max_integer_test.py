@@ -20,5 +20,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-8, -90, -1]), -1)
         self.assertEqual(max_integer([0.1, 0.5, 0.04]), 0.5)
 
+
 if __name__ == "__main__":
     unittest.main()
