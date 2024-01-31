@@ -13,7 +13,7 @@ importing function:
     My name is Jason Statham
 
     >>> say_my_name("Gabby")
-    My name is Gabby 
+    My name is Gabby
 
 Checking errors:
     >>> say_my_name(1, "Gabby")
@@ -39,4 +39,3 @@ Checking errors:
     >>> say_my_name()
     Traceback (most recent call last):
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
-    
