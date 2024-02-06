@@ -5,4 +5,14 @@
 
 
 def class_to_json(obj):
-    return obj.__dict__
+    """returns dictionary description of JSON
+        you can just return obj.__dict__    
+    """
+    new_json = {}
+    #__dict__.item() is a built in method to check the items of a dictionary
+    for name, value in obj.__dict__.items():
+        if isinstance(value, (list, str, bool, int, dict)):
+            new_json[name] = value
+        else:
+            pass
+    return new_json
