@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Define Rectangle class"""
+"""class that raises error when empty"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Represent a object Rectangle"""
+    """function to initialise the inheritancey"""
 
     def __init__(self, width, height):
         """initialse the inheritance"""
