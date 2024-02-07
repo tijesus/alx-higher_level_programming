@@ -14,7 +14,8 @@ class Student:
         """check if attrs is a list
             iterate through atter to check if all attributes are string
             iterate the attrs and use hasattr to check if attribute exist
-            if it exist, getattr gets it and return its key and value
+            if it exist, new dictionary is created and
+            getattr gets it and return its key and value
         """
         if isinstance(attrs, list) and\
             all(isinstance(x, str) for x in attrs):
