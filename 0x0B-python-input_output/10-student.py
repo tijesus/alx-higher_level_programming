@@ -18,8 +18,7 @@ class Student:
             getattr gets it and return its key and value
         """
         if isinstance(attrs, list) and\
-            all(isinstance(x, str) for x in attrs):
+                all(isinstance(x, str) for x in attrs):
             return {x: getattr(self, x) for x in attrs if hasattr(self, x)}
         else:
             return self.__dict__
-
