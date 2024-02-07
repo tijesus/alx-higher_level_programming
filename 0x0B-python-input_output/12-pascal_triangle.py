@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """R Pascal's Triangle of size n"""
     if n <= 0:
         return list()
     triangle = list()
