@@ -5,7 +5,7 @@
 import json
 
 
-class Base:
+class Base():
     """class initialising the base"""
 
     __nb_objects = 0
@@ -30,15 +30,14 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """save json representation of file"""
-        filename = cls.__name__ + '.json'
-        if list_objs is None:
-            list_dict = []
-        else:
-            list_dict = [obj.to_dictionary() for obj in list_objs]
-            json_string = cls.to_json_string(list_dict)
+        filename = cls.__name__ + ".json"
 
-        with open(filename, 'w') as f:
-            f.write(json_string)
+        with open(filename, "w") as file:
+            if list_objs is None:
+                file.write("[]")
+            else:
+                l_dicts = [obj.to_dictionary() for obj in list_objs]
+                file.write(Base.to_json_string(l_dicts))
 
     @staticmethod
     def from_json_string(json_string):
