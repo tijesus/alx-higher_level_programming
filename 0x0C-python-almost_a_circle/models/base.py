@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 """Base class for the model"""
+
 import json
 
 
