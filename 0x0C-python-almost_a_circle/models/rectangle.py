@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""Rectangle class"""
+"""This module contains a rectangle class"""
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle class containing its functions"""
+    """Represents a rectangle """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initializes attributes of the object"""
         self.width = width
         self.height = height
         self.x = x
@@ -16,6 +17,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Gets the value for width"""
         return self.__width
 
     @width.setter
