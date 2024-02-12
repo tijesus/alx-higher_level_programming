@@ -11,6 +11,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """initialise the base"""
         if id is not None:
             self.id = id
         else:
@@ -19,6 +20,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """returns a json string representation of a list of dictionaries"""
         if len(list_dictionaries) == 0 or \
                 list_dictionaries is None:
             return "[]"
@@ -27,6 +29,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """save json representation of file"""
         filename = cls.__name__ + '.json'
         if list_objs is None:
             list_dict = []
