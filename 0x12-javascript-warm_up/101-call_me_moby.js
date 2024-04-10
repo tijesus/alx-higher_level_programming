@@ -4,4 +4,3 @@ exports.callMeMoby = (x, theFuntion) => {
     theFuntion();
   }
 };
-
