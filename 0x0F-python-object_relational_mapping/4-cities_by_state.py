@@ -5,7 +5,7 @@ from sys import argv
 if __name__ == '__main__':
     """List all cities in the database"""
 
-    state_name=argv[4]
+    state_name = argv[4]
     db_connect = MySQLdb.connect(
         host='localhost', port=3306, user=argv[1], passwd=argv[2],
         db=argv[3])
@@ -17,4 +17,3 @@ if __name__ == '__main__':
     if cities_states is not None:
         for city_state in cities_states:
             print(city_state)
-

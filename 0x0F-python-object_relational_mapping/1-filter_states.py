@@ -20,7 +20,7 @@ if __name__ == '__main__':
         """ getting the first character of the state
             if s = {1, "Nevad"} to access first character
             s[1] targets Nevad and s[0] targets N
-            :. s[1][0] == N 
+            :. s[1][0] == N
         """
         if state[1][0] == "N":
             print(state)
