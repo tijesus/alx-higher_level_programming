@@ -23,8 +23,6 @@ if __name__ == "__main__":
     session = Session()
 
     state = session.query(State).filter(State.id == 2).first()
-
-    new_state = State(name="Louisiana")
     session.name = "New Mexico"
     session.commit()
 
