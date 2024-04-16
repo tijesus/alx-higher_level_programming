@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    update the database to get state
+    update the database to get state object
     """
 
     db_url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     state = session.query(State).filter(State.id == 2).first()
 
     new_state = State(name="Louisiana")
-    session.name ="New Mexico"
+    session.name = "New Mexico"
     session.commit()
 
     session.close()
