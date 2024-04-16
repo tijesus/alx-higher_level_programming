@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     db_cursor = db_connect.cursor()
 
-    db_cursor.execute("SSELECT * FROM states ORDER BY id ASC")
+    db_cursor.execute("SSELECT * FROM states ORDER BY states.id ASC")
 
     rows_selected = db_cursor.fetchall()
 
