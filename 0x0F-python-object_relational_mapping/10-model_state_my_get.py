@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This script that lists all states
-passed from commandline in `hbtn_0e_6_usa`.
+This script prints the first State object
+from the database `hbtn_0e_6_usa`.
 """
 
 from sys import argv
@@ -10,7 +10,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    """Cheacking the database to get state"""
+    """Print the database and get a state
+    from the database.
+    """
 
     db_path = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
         argv[1], argv[2], argv[3])
@@ -20,8 +22,8 @@ if __name__ == "__main__":
 
     session = Session()
 
-    states = session.query(State).filter(State.name == argv[4]).first()
-    if states is not None:
-        print('{0}'.format(states.id))
+    state = session.query(State).filter(State.name == argv[4]).first()
+    if state is not None:
+        print('{0}'.format(state.id))
     else:
         print("Not found")
