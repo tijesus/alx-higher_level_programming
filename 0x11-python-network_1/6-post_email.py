@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""post emailreceived from terminal"""
+"""post email received from terminal"""
 
 import requests
 import sys
