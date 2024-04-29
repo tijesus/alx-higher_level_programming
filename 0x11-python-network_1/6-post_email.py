@@ -1,12 +1,17 @@
 #!/usr/bin/python3
-"""post email received from terminal"""
-
-import requests
+"""Sends a request to a given URL and displays the response body.
+Usage: ./7-error_code.py <URL>
+  - Handles HTTP errors.
+"""
 import sys
+import requests
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    value = {"email": sys.argv[2]}
 
-    req = requests.post(url, data=value)
-    print(req.text)
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
+    else:
+        print(r.text)
