@@ -11,5 +11,5 @@ if __name__ == "__main__":
     url = 'https://api.github.com/user'
     req = requests.get(url, auth=(username, password))
 
-    req_id = r.json().get('id')
+    req_id = req.json().get('id')
     print(req_id)
