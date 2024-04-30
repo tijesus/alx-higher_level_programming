@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""Display the user GitHub id"""
+""" Display github id from terminal"""
 
-import sys
 import requests
+import sys
 
 if __name__ == "__main__":
-
-
     username = sys.argv[1]
     password = sys.argv[2]
 
@@ -15,4 +13,3 @@ if __name__ == "__main__":
 
     req_id = r.json().get('id')
     print(req_id)
-    
