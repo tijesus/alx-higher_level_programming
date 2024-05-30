@@ -7,7 +7,7 @@ $(document).ready(function () {
 		$("ul.my_list li:last-child").remove();
 	});
 
-	$("DIV#remove_item").click(function () {
+	$("DIV#clear_list").click(function () {
 		$("ul.my_list").empty();
 	});
 });
